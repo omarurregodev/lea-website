@@ -1,0 +1,27 @@
+@use "../../variables" as *;
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+
+  .dot {
+    width: 20px;
+    height: 20px;
+    background: url("../../assets/dot.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.5);
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+  }
+  .dot.active {
+    background: url("../../assets/star.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.5);
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+  }
+}

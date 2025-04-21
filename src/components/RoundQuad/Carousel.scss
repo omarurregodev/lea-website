@@ -1,0 +1,42 @@
+@use "../../variables" as *;
+
+.prods-carousel {
+  overflow: hidden;
+  position: relative;
+  height: 65%;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:hover {
+    overflow: auto;
+  }
+
+  &-track {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: bannermove 30s linear infinite;
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes bannermove {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+}

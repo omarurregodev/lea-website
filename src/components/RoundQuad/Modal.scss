@@ -1,0 +1,141 @@
+@use "../../variables" as *;
+
+.modal-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  background-color: rgba($color: $darkBlue, $alpha: 0.75);
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.modal-background.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  height: 85%;
+  padding: 30px;
+  background-image: url("../../assets/bg_slider.png");
+  background-position: center;
+  background-size: contain;
+  border-radius: 25px;
+  border: 2px solid $orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  transition: bottom 0.5s ease-in-out;
+  z-index: -1;
+  opacity: 0;
+
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    width: 95%;
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    text-align: left;
+    font-family: $secondaryFont;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: $white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      z-index: 0;
+      width: 0px;
+      border-bottom: 1px solid $orange;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover::before {
+      width: calc(100% - 1px);
+    }
+    &:hover {
+      color: white;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1360px;
+    height: 100%;
+    padding-top: 50px;
+    &-title {
+      font-family: $primaryFont;
+      font-size: 2.5rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
+      color: $white;
+      padding-bottom: 5px;
+      @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 2rem;
+      }
+    }
+    &-subtitle {
+      color: $white;
+      font-family: $primaryFont;
+      font-size: 1.5rem;
+      font-weight: 300;
+      letter-spacing: 0.8px;
+      line-height: 1.25;
+      margin-bottom: 30px;
+      @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 1.25rem;
+      }
+    }
+    &-desc {
+      text-align: center;
+      font-family: $secondaryFont;
+      font-size: 1rem;
+      font-weight: 300;
+      color: $white;
+      width: 75%;
+      @media (min-width: 768px) and (max-width: 1024px) {
+        width: 90%;
+      }
+    }
+
+    &-products {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding-top: 40px;
+      @media (min-width: 1024px) and (max-width: 1280px) {
+        gap: 30px;
+      }
+    }
+  }
+}
+
+.modal.visible {
+  opacity: 1;
+  z-index: 5;
+  transition: all 0.5s ease-in-out;
+}

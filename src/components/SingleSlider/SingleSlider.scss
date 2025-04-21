@@ -1,0 +1,129 @@
+@use "../../variables" as *;
+
+.singleSlider {
+  height: 820px;
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 30px 40px;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 767px) {
+    height: 670px;
+    padding: 70px 30px 30px;
+  }
+  .subtitle {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    .animated-svg {
+      transform:  rotate(-1deg);
+    }
+
+    .animated-svg.animate .svg-path {
+      stroke-dashoffset: 0; /* Draw the path */
+    }
+
+    .svg-path {
+      stroke-dasharray: 300; /* Total path length */
+      stroke-dashoffset: 300; /* Start completely hidden */
+      transition: stroke-dashoffset 2s ease-in-out; /* Smooth animation */
+    }
+  }
+
+  .slider {
+    padding: 30px 0;
+    height: 100%;
+    position: relative;
+
+    .slide.active {
+      transition: all 1s ease-in-out;
+    }
+
+    .slide {
+      position: relative;
+      height: 100%;
+      &-copy {
+        position: relative;
+        z-index: 1;
+        width: 55%;
+        padding-top: 50px;
+        @media (max-width: 767px) {
+          width: 100%;
+          padding-top: 10px;
+        }
+        span {
+          color: $white;
+          font-family: $primaryFont;
+          font-size: 2rem;
+          font-weight: 300;
+          letter-spacing: 1.5px;
+          line-height: 1.25;
+          word-spacing: 5px;
+          @media (max-width: 767px) {
+            font-size: 1.05rem;
+            font-weight: 200;
+            letter-spacing: 2px;
+            line-height: 1.25;
+          }
+          @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 1.15rem;
+            font-weight: 200;
+            letter-spacing: 2px;
+            line-height: 1.25;
+          }
+        }
+      }
+      &-image {
+        position: absolute;
+        bottom: 0px;
+        right: 60px;
+        z-index: 0;
+        width: auto;
+        height: auto;
+        max-width: 375px;
+        max-height: 545px;
+        transform: rotateZ(0deg);
+        border-radius: 35px;
+        background-color: $orange;
+        img {
+          height: 100%;
+          max-height: 545px;
+          transform: rotateZ(10deg);
+          border-radius: inherit;
+          @media (min-width: 768px) and (max-width: 1024px) {
+            max-height: 380px;
+          }
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      .slide.visuallyhidden {
+        height: 0;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .slide.visuallyhidden {
+        height: 0;
+      }
+    }
+
+    &-nav {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      position: absolute;
+      left: 0;
+      bottom: 10%;
+      @media (max-width: 767px) {
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-61%);
+      }
+      @media (min-width: 1024px) and (max-width: 1280px) {
+        bottom: 0%;
+      }
+    }
+  }
+}

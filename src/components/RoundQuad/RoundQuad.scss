@@ -1,0 +1,176 @@
+@use "../../variables" as *;
+
+.roundQuad {
+  height: 920px;
+  max-width: $width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 30px 40px;
+  @media (max-width: 767px) {
+    height: 450px;
+    padding: 30px;
+  }
+  &-container {
+    height: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    position: relative;
+    .subtitle {
+      color: #fff;
+      height: 10%;
+      display: flex;
+      flex-direction: row;
+    
+      .animated-svg {
+        transform: rotate(-1deg);
+      }
+
+      .animated-svg.animate .svg-path {
+        stroke-dashoffset: 0; /* Draw the path */
+      }
+
+      .svg-path {
+        stroke-dasharray: 300; /* Total path length */
+        stroke-dashoffset: 300; /* Start completely hidden */
+        transition: stroke-dashoffset 2s ease-in-out; /* Smooth animation */
+      }
+    }
+    .parragraph {
+      width: 80%;
+      color: $white;
+      font-family: $primaryFont;
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      line-height: 1.25;
+      word-spacing: 5px;
+      @media (max-width: 767px) {
+        width: 100%;
+        font-size: 1.15rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+        line-height: 1.25;
+        padding-top: 40px;
+      }
+      @media (min-width: 768px) and (max-width: 1024px) {
+        width: 100%;
+        font-size: 1.15rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+        line-height: 1.25;
+        padding: 40px 0;
+      }
+    }
+    .course_btn {
+      padding: 30px 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      &-item {
+        .cursos-link {
+          display: flex;
+          width: 150px;
+          height: 40px;
+          padding: 11px var(--Space-200, 8px);
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border-radius: 17.5px;
+          border: 1px solid #d9d9d9;
+          background: #dc5326;
+          color: #d9d9d9;
+          font-family: $secondaryFont;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          text-transform: uppercase;
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+  }
+  .prods-carousel-filter {
+    position: absolute;
+    top: 25%;
+    left: -1px;
+    z-index: 1;
+    width: calc(100% + 2px);
+    height: 65%;
+    background: rgb(0, 17, 52);
+    background: -moz-linear-gradient(
+      90deg,
+      rgba(0, 17, 52, 1) 0%,
+      rgba(0, 17, 52, 0.2049413515406162) 25%,
+      rgba(0, 17, 52, 0.19653799019607843) 75%,
+      rgba(0, 17, 52, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      90deg,
+      rgba(0, 17, 52, 1) 0%,
+      rgba(0, 17, 52, 0.2049413515406162) 25%,
+      rgba(0, 17, 52, 0.19653799019607843) 75%,
+      rgba(0, 17, 52, 1) 100%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(0, 17, 52, 1) 0%,
+      rgba(0, 17, 52, 0.2049413515406162) 25%,
+      rgba(0, 17, 52, 0.19653799019607843) 75%,
+      rgba(0, 17, 52, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#001134",endColorstr="#001134",GradientType=1);
+    pointer-events: none;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      top: unset;
+    }
+  }
+
+  .moreInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    height: 5%;
+    p {
+      display: inline-flex;
+      gap: 5px;
+      font-family: "lato", sans-serif;
+      font-size: 14px;
+      color: $white;
+      @media (max-width: 767px) {
+        font-size: 12px;
+        font-weight: 300;
+      }
+      a {
+        position: relative;
+        width: 100%;
+        color: #d9d9d9;
+        font-family: $secondaryFont;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        transition: all 0.3s ease-in-out;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: -3px;
+          z-index: 0;
+          width: 0px;
+          border-bottom: 1px solid $orange;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover::before {
+          width: calc(100% - 1px);
+        }
+        &:hover {
+            color: white;
+        }
+      }
+    }
+  }
+}

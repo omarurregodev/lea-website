@@ -1,0 +1,9 @@
+@use "../../variables" as *;
+
+.main {
+  background-image: url("../../assets/bg_slider.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  position: relative;
+}

@@ -1,0 +1,111 @@
+@use "../../variables" as *;
+
+.blog-content-slider::-webkit-scrollbar {
+  display: none;
+}
+.blog-content-slider {
+  max-width: 45%;
+  width: 1000px !important;
+  overflow-x: auto;
+  display: -webkit-inline-box;
+  gap: 30px;
+  position: relative;
+
+  &-track {
+    display: flex;
+    gap: 30px;
+
+    @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      &-item {
+        width: 300px;
+        max-width: 300px;
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards;
+        @media (min-width: 1024px) and (max-width: 1280px) {
+          width: 250px;
+          max-width: 250px;
+        }
+       
+        img {
+          width: 100%;
+        }
+    
+        h3 {
+          margin: 10px 0 20px;
+          font-family: $primaryFont;
+          font-size: 1.2rem;
+          font-weight: 500;
+          letter-spacing: 0.5px;
+          line-height: 1.15;
+          color: #fff;
+          position: relative;
+          @media (min-width: 1024px) and (max-width: 1280px) {
+            font-size: 1.2rem;
+          }
+        }
+        p {
+          text-align: left;
+          font-family: $secondaryFont;
+          font-size: 1rem;
+          font-weight: 400;
+          color: #fff;
+          @media (min-width: 1024px) and (max-width: 1280px) {
+            font-size: 0.9rem;
+          }
+        }
+        button {
+          margin-top: 20px;
+          a {
+            position: relative;
+            text-align: left;
+            font-family: $secondaryFont;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+    
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              left: 0;
+              bottom: -3px;
+              z-index: 0;
+              width: 0px;
+              border-bottom: 2px solid $orange;
+              transition: all 0.3s ease-in-out;
+            }
+            &:hover::before {
+              width: calc(100% - 1px);
+            }
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+  }
+
+}
+.blog-content-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  position: absolute;
+  left: 55.3%;
+  bottom: 10px;
+
+  .leftArrow {
+    transform: scale(1.5);
+  }
+  .rightArrow {
+    transform: rotateZ(180deg) scale(1.5);
+  }
+}

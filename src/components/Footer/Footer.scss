@@ -1,0 +1,182 @@
+@use "../../variables" as *;
+
+.footer {
+  width: 100%;
+  background-color: $darkBlue;
+  border-top: 0.1px solid rgba($color: $lightBlue, $alpha: 0.1);
+  &-top {
+    max-width: $width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 70px 30px 50px;
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      padding: 40px 30px 0px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      gap: 40px;
+    }
+
+    &-logo {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      width: 50%;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+
+      img {
+        width: 300px;
+        @media (max-width: 767px) {
+          width: 200px;
+          padding: 60px 0;
+        }
+      }
+    }
+
+    &-info {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @media (max-width: 767px) {
+        width: 100%;
+        align-items: center;
+      }
+      @media (min-width: 768px) and (max-width: 1024px) {
+        width: 50%;
+      }
+
+      h3 {
+        font-family: $secondaryFont;
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        line-height: 1.15;
+        color: $orange;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+        @media (max-width: 767px) {
+          text-align: left;
+        }
+      }
+      p {
+        text-align: left;
+        font-family: $secondaryFont;
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: $white;
+        @media (max-width: 767px) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .socialIcons {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        @media (max-width: 767px) {
+          padding: 40px 0;
+        }
+        a {
+          padding: 15px;
+          border: 1px solid $orange;
+          border-radius: 50%;
+          transition: 0.5s all ease-in-out;
+          img {
+            width: 30px;
+          }
+          &:hover {
+            background-color: rgba($color: $orange, $alpha: 1);
+          }
+        }
+      }
+    }
+
+    &-links {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      h3 {
+        font-family: $secondaryFont;
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        line-height: 1.15;
+        color: $orange;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+      }
+      p {
+        text-align: left;
+        font-family: $secondaryFont;
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: $white;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: -3px;
+          z-index: 0;
+          width: 0px;
+          border-bottom: 1px solid $orange;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover::before {
+          width: calc(100% - 1px);
+        }
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
+.footer-bottom {
+  background-color: $darkBlue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 20px;
+    width: 100vw;
+  }
+  p {
+    width: 100%;
+    background-color: $orange;
+    text-align: left;
+    font-family: $secondaryFont;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    @media (max-width: 767px) {
+      font-size: 0.6rem;
+    }
+    a {
+      margin-left: 4px;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}

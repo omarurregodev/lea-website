@@ -1,0 +1,19 @@
+@use "../../variables" as *;
+
+header {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: $maxWidth;
+    width: 100%;
+    height: auto;
+    z-index: 99;
+
+    @media (max-width: 767px) {
+      top: 0;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      top: 0;
+    }
+}

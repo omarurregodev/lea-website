@@ -1,0 +1,129 @@
+@use "../../variables" as *;
+
+.simpleQuad {
+  max-width: $width;
+  width: 100%;
+  height: 800px;
+  margin: 0 auto;
+  padding: 70px 30px 0px;
+
+  &-container {
+    height: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+
+    .subtitle {
+      color: #fff;
+      height: 10%;
+      display: flex;
+      flex-direction: row;
+      .animated-svg {
+        transform: rotate(-1deg);
+      }
+
+      .animated-svg.animate .svg-path {
+        stroke-dashoffset: 0; /* Draw the path */
+      }
+
+      .animated-svg.animate .svg-path {
+        stroke-dashoffset: 0; /* Draw the path */
+      }
+
+      .svg-path {
+        stroke-dasharray: 300; /* Total path length */
+        stroke-dashoffset: 300; /* Start completely hidden */
+        transition: stroke-dashoffset 2s ease-in-out; /* Smooth animation */
+      }
+    }
+    p {
+      width: 80%;
+      color: $white;
+      font-family: $primaryFont;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      line-height: 1.25;
+      word-spacing: 5px;
+    }
+
+    .staff {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: auto;
+      align-items: center;
+      justify-content: space-around;
+      padding-top: 80px;
+
+      &-item {
+        height: 80%;
+        width: 23%;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .filterBg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 50%;
+          width: 100%;
+          background-color: rgba($color: $orange, $alpha: 0.15);
+          z-index: 1;
+          border-radius: 25px 25px 0 0;
+        }
+
+        img {
+          height: 50%;
+          object-fit: cover;
+          object-position: top;
+          border-radius: 25px 25px 0 0;
+        }
+        &-desc {
+          background-color: rgba($color: $orange, $alpha: 0.8);
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          height: auto;
+          border-radius: 0 0 25px 25px;
+          h3 {
+            font-family: $primaryFont;
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 1.15;
+            color: #fff;
+            pointer-events: none;
+          }
+
+          p {
+            text-align: left;
+            font-family: $secondaryFont;
+            font-size: 1rem;
+            font-weight: 300;
+            color: $white;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .moreInfo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: right;
+      height: 5%;
+      p {
+        display: inline-flex;
+        gap: 5px;
+        font-family: "lato", sans-serif;
+        font-size: 14px;
+        color: $white;
+        a {
+        }
+      }
+    }
+  }
+}

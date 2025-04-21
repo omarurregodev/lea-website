@@ -1,0 +1,104 @@
+@use "../../variables" as *;
+
+.blog-content-big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53%;
+
+  &-content {
+    width: 100%;
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: end;
+    @media (min-width: 1024px) and (max-width: 1280px) {
+      width: 100%;
+      height: 650px;
+    }
+    img {
+      object-position: center center;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      mask-image: linear-gradient(to bottom, $darkBlue 30%, transparent);
+      @media (min-width: 1024px) and (max-width: 1280px) {
+        width: 100%;
+      height: 650px;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 25px;
+      position: relative;
+      z-index: 1;
+
+      svg {
+        position: absolute;
+        top: -120px;
+        right: 20px;
+      }
+      h3 {
+        font-family: $primaryFont;
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        line-height: 1.15;
+        color: #fff;
+        position: relative;
+        @media (min-width: 1024px) and (max-width: 1280px) {
+          font-size: 1.8rem;
+        }
+      }
+      p {
+        text-align: left;
+        font-family: $secondaryFont;
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 1.15;
+        color: #fff;
+        padding: 5px 0 10px;
+        @media (min-width: 1024px) and (max-width: 1280px) {
+          font-size: 1rem;
+        }
+      }
+      button {
+        margin-top: 20px;
+        a {
+          position: relative;
+          text-align: left;
+          font-family: $secondaryFont;
+          font-size: 1rem;
+          font-weight: 400;
+          color: #fff;
+          transition: all 0.3s ease-in-out;
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            z-index: 0;
+            width: 0px;
+            border-bottom: 2px solid $orange;
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover::before {
+            width: calc(100% - 1px);
+          }
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@use "../../variables" as *;
+
+.carousel-card.up {
+  top: -20px;
+}
+.carousel-card.down {
+  top: 20px;
+}
+
+.carousel-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 295px;
+  height: 380px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s all ease-in-out;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    min-width: 200px;
+    height: 250px;
+  }
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    min-width: 230px;
+    height: 280px;
+  }
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  &:hover img {
+    transform: scale(1.3);
+  }
+
+  &:hover &-content {
+    transform: scale(1.2);
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+  }
+
+  &-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -15px;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all ease-in-out;
+
+    &-title {
+      color: $darkBlue;
+      font-family: $primaryFont;
+      font-size: 1.5rem;
+      font-weight: 300;
+      letter-spacing: 0.8px;
+      line-height: 1.25;
+      word-spacing: 5px;
+      white-space: pre-line;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 1.3rem;
+      }
+    }
+    &-subtitle {
+      color: $darkBlue;
+      font-family: $primaryFont;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      line-height: 1.25;
+      white-space: pre-line;
+      text-align: center;
+      @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+}

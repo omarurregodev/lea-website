@@ -1,0 +1,74 @@
+//Class Hidden not affects ADA
+body {
+  -webkit-text-size-adjust: 100%; /* Prevents automatic text resizing */
+}
+.visuallyhidden {
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px;
+  width: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  opacity: 0;
+}
+
+// Colors
+$orange: #DC5326;
+// $orange: #cc5c35;
+$darkBlue: #001134;
+$lightBlue: #6ec1e4;
+$white: #d4d4d4;
+
+// Gradients
+
+$bgHero: linear-gradient(
+  180deg,
+  rgba(27, 118, 142, 0.8) 0%,
+  rgba(18, 79, 95, 0.62) 72.5%,
+  rgba(8, 33, 40, 0.8) 100%
+);
+$bgServices: linear-gradient(90deg, #012538 63.5%, rgba(1, 37, 56, 0.78) 100%);
+$bgFooter: linear-gradient(90deg, rgba(1, 37, 56, 0.52) 0%, #012538 35.49%);
+
+// Font
+
+$familyFont: Helvetica, Sans-Serif;
+$primaryFont: "Poppins", serif;
+$secondaryFont: "Montserrat", sans-serif;
+
+// Font Size
+
+.subtitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  font-family: $secondaryFont;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  width: fit-content;
+  position: relative;
+
+  span {
+    position: absolute;
+    right: -85px;
+    top: 50%;
+    transform: translateY(-50%) scale(1.5);
+  }
+}
+
+// Devices
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+}
+
+// Containers
+
+$maxWidth: 1440px;
+$width: 1360px;

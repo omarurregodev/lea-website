@@ -1,0 +1,96 @@
+import { useState } from "react";
+import "./EnquiryForm.scss";
+
+function EnquiryForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    subject: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch(
+      "https://formsubmit.co/omarurrego@omarurrego.com",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      }
+    );
+
+    if (response.ok) {
+      setStatus("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "", subject: "" });
+    } else {
+      setStatus("Error sending message.");
+    }
+  };
+  return (
+    <>
+      <form onSubmit={handleSubmit}>
+        <div className="form-field">
+          <input
+            type="text"
+            name="name"
+            onChange={handleChange}
+            value={formData.name}
+            required
+          />
+          <label>Nombre</label>
+        </div>
+        <div className="form-field">
+          <input
+            type="email"
+            name="email"
+            onChange={handleChange}
+            value={formData.email}
+            required
+          />
+          <label>Correo electrónico</label>
+        </div>
+        <div className="form-field">
+          <select
+            name="subject"
+            onChange={handleChange}
+            value={formData.subject}
+            required
+          >
+            <option value="ingles">Inglés</option>
+            <option value="frances">Francés</option>
+            <option value="español">Español</option>
+            <option value="otro">Otro...</option>
+          </select>
+          <label>Selecciona</label>
+        </div>
+        <div className="form-field">
+          <textarea
+            name="message"
+            onChange={handleChange}
+            value={formData.message}
+            required
+          ></textarea>
+          <label>Tu mensaje</label>
+        </div>
+        <div className="field-tc">
+          {/* <input type="checkbox" id="" name="check" value="" />
+          <label htmlFor="">Acepto el tratamiento de mis datos</label> */}
+          <input type="hidden" name="_next" value="" />
+        </div>
+        <div className="submit-field">
+          <input type="submit" />
+          <p>{status}</p>
+        </div>
+      </form>
+    </>
+  );
+}
+
+export default EnquiryForm;

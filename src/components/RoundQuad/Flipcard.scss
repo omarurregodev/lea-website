@@ -1,0 +1,193 @@
+@use "../../variables" as *;
+
+.flip-card {
+  width: 200px;
+  height: 250px;
+  perspective: 1000px;
+  cursor: pointer;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 180px;
+    height: 240px;
+  }
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    width: 200px;
+    height: 260px;
+  }
+}
+
+.flip-card:first-child, .flip-card:nth-child(4) {
+  .flip-card-inner {
+    .flip-card-front,
+    .flip-card-back {
+      border: 3px solid $orange;
+    }
+  }
+}
+.flip-card:nth-child(2) {
+  .flip-card-inner {
+    .flip-card-front,
+    .flip-card-back {
+      border: 3px solid $lightBlue;
+    }
+  }
+}
+.flip-card:nth-child(3) {
+  .flip-card-inner {
+    .flip-card-front,
+    .flip-card-back {
+      border: 3px solid $white;
+    }
+  }
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s all ease-in-out;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s all ease-in-out;
+  }
+  &:hover {
+    transform: scale(0.95);
+  }
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  &-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 10px;
+    background-color: rgba($color: $darkBlue, $alpha: 0.5);
+  }
+
+  h3 {
+    color: #fff;
+    font-family: $primaryFont;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    line-height: 1.25;
+    text-align: center;
+    position: relative;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 1rem;
+    }
+  }
+
+  p {
+    color: #fff;
+    font-family: $primaryFont;
+    padding-top: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    line-height: 1.25;
+    text-align: center;
+    position: relative;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+.flip-card-back {
+  background-color: rgba($color: #dddddd, $alpha: 1);
+  transform: rotateY(180deg);
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 0 10px;
+    gap: 20px;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      padding: 0 10px 0 10px;
+    }
+    li {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        color: $darkBlue;
+        font-family: $secondaryFont;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.25;
+        text-align: center;
+        margin-bottom: 10px;
+        @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 0.85rem;
+          letter-spacing: 0px;
+        }
+      }
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 10px 0;
+      }
+      span {
+        color: $darkBlue;
+        font-family: $secondaryFont;
+        font-size: 0.95rem;
+        letter-spacing: 0.8px;
+        line-height: 1.25;
+        text-align: center;
+        @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 0.85rem;
+          letter-spacing: 0px;
+        }
+      }
+      .day-line {
+        font-weight: 700;
+        font-size: 1rem;
+      }
+      .hour-line {
+        font-weight: 500;
+      }
+      .price-line {
+        font-weight: 500;
+        margin-top: 5px;
+      }
+    }
+  }
+}
