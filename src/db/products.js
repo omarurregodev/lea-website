@@ -429,7 +429,7 @@ const productsList = [
             },
             {
                 id: 1,
-                title: "LEAders C1.1",
+                title: "LEAders C1.2",
                 subtitle: "Consolidación",
                 desc: {
                     desc:"Preparación avanzada para el DALF C1.",
