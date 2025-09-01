@@ -18,7 +18,7 @@ function EnquiryForm() {
     e.preventDefault();
 
     const response = await fetch(
-      "https://formsubmit.co/omarurrego@omarurrego.com",
+      "https://formsubmit.co/contacto@teamlea.com",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -37,7 +37,7 @@ function EnquiryForm() {
     <>
       <form onSubmit={handleSubmit}>
         <div className="form-field">
-          <input
+          <input aria-label="nombre"
             type="text"
             name="name"
             onChange={handleChange}
@@ -47,7 +47,7 @@ function EnquiryForm() {
           <label>Nombre</label>
         </div>
         <div className="form-field">
-          <input
+          <input aria-label="email"
             type="email"
             name="email"
             onChange={handleChange}
@@ -59,6 +59,7 @@ function EnquiryForm() {
         <div className="form-field">
           <select
             name="subject"
+            aria-label="escoger idioma"
             onChange={handleChange}
             value={formData.subject}
             required
@@ -73,6 +74,7 @@ function EnquiryForm() {
         <div className="form-field">
           <textarea
             name="message"
+            aria-label="mensaje"
             onChange={handleChange}
             value={formData.message}
             required
@@ -80,12 +82,12 @@ function EnquiryForm() {
           <label>Tu mensaje</label>
         </div>
         <div className="field-tc">
-          {/* <input type="checkbox" id="" name="check" value="" />
+          {/* <input aria-label="terminos y condiciones" type="checkbox" id="" name="check" value="" />
           <label htmlFor="">Acepto el tratamiento de mis datos</label> */}
-          <input type="hidden" name="_next" value="" />
+          <input aria-label="hidden" type="hidden" name="_next" value="" />
         </div>
         <div className="submit-field">
-          <input type="submit" />
+          <input aria-label="submit" type="submit" />
           <p>{status}</p>
         </div>
       </form>

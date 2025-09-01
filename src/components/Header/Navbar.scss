@@ -27,7 +27,7 @@
   }
   .navSide {
     display: flex;
-    width: 50%;
+    width: auto;
     height: 72px;
     padding: 10px 20px;
     justify-content: flex-end;
@@ -37,9 +37,6 @@
     border-radius: 17.5px;
     background: rgba(0, 17, 52, 0.9);
     box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    @media (min-width: 1024px) and (max-width: 1279px) {
-      width: 56%;
-    }
 
     &_navBtn {
       width: 100%;

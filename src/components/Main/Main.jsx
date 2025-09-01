@@ -17,7 +17,8 @@ function Main({scrollToRef, usRef, coursesRef, blogRef, contactRef, isTablet, is
             <SingleSlider scrollToRef={scrollToRef} usRef={usRef} isTablet={isTablet} isMobile={isMobile}/>
             <RoundQuad scrollToRef={scrollToRef} coursesRef={coursesRef} isTablet={isTablet} isMobile={isMobile}/>
             <Testimonials isTablet={isTablet} isMobile={isMobile}/>
-            {(!isTablet && !isMobile) ? <SimpleQuad isTablet={isTablet} isMobile={isMobile}/> : null}
+            {/* THIS IS STAFF SECTION / OFF */}
+            {/* {(!isTablet && !isMobile) ? <SimpleQuad isTablet={isTablet} isMobile={isMobile}/> : null} */}
             <Blog scrollToRef={scrollToRef} blogRef={blogRef} isTablet={isTablet} isMobile={isMobile}/>
             <Enquiry scrollToRef={scrollToRef} contactRef={contactRef} isTablet={isTablet} isMobile={isMobile}/>
             <Wbutton />

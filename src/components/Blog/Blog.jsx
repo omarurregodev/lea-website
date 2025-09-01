@@ -3,10 +3,9 @@ import blogList from "../../db/blog";
 import PrimaryEntry from "./PrimaryEntry";
 import BlogSlider from "./BlogSlider";
 import { useInView, animated } from "@react-spring/web";
-import DownloadIcon from "../../assets/downloadIcon.svg";
+import externalIcon from "../../assets/external_link.svg";
 
 import "./Blog.scss";
-import { div } from "framer-motion/client";
 
 function Blog({ scrollToRef, blogRef, isTablet, isMobile }) {
   const [modifyList, setModifyList] = useState([]);
@@ -74,7 +73,7 @@ function Blog({ scrollToRef, blogRef, isTablet, isMobile }) {
       <section ref={blogRef} id="blog_section" className="blog">
         <animated.div ref={ref} style={inView} className="blog-head">
           <h2 className="subtitle">
-            Anuncios
+            Novedades LEA
             <span>
               <svg
                 className={`animated-svg ${svgpathVisible ? "animate" : ""}`}
@@ -93,7 +92,7 @@ function Blog({ scrollToRef, blogRef, isTablet, isMobile }) {
               </svg>
             </span>
           </h2>
-          <p>Mantente al día con nuestras novedades / Descubre los próximos cursos, nuevos servicios y toda la información clave para seguir avanzando en tu aprendizaje. ¡No te pierdas nada!</p>
+          <p>Descubre los próximos cursos, nuevos servicios y toda la información clave para seguir avanzando en tu aprendizaje. Stay tuned!</p>
         </animated.div>
 
         {!isMobile && !isTablet ? (
@@ -111,19 +110,19 @@ function Blog({ scrollToRef, blogRef, isTablet, isMobile }) {
                     index === currentIndex ? "active" : "hidden"
                   }`}
                 >
-                  <img src={slide.img} alt="" />
+                  <img src={slide.img} alt={slide.alt} />
                   <h3>{slide.title}</h3>
                   <p>{slide.date}</p>
                   <p>{slide.desc}</p>
                   {slide.cta && (
-                    <button>
-                      <a href={slide.link} target="_blank"><img src={DownloadIcon} alt="" /></a>
+                    <button aria-label="descarga">
+                      <a href={slide.link} target="_blank" aria-label="descarga de contenido"><img src={externalIcon} alt="icono de external link" /></a>
                     </button>
                   )}
                 </div>
               ))}
               <div className="blog-content_mobile-slider_nav">
-                <button className="navleftArrow" onClick={handlePrev}>
+                <button className="navleftArrow" onClick={handlePrev} aria-label="flecha izquierda">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="10"
@@ -140,7 +139,7 @@ function Blog({ scrollToRef, blogRef, isTablet, isMobile }) {
                     />
                   </svg>
                 </button>
-                <button className="navrightArrow" onClick={handleNext}>
+                <button className="navrightArrow" onClick={handleNext} aria-label="flecha derecha">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="10"

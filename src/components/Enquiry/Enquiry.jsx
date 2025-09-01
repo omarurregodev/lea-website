@@ -3,8 +3,8 @@ import EnquiryForm from "./EnquiryForm";
 import { useInView, animated } from "@react-spring/web";
 
 import "./Enquiry.scss";
-import IllustrationDesktop from "../../assets/desktop_img.png";
-import IllustrationMobile from "../../assets/mobile_img.png";
+import IllustrationDesktop from "../../assets/desktop_img.webp";
+import IllustrationMobile from "../../assets/mobile_img.webp";
 
 function Enquiry({ scrollToRef, contactRef, isTablet, isMobile }) {
   // Animation
@@ -77,7 +77,7 @@ function Enquiry({ scrollToRef, contactRef, isTablet, isMobile }) {
             style={inView}
             className="enquiry-illustration-desktop"
           >
-            <img src={IllustrationDesktop} alt="" />
+            <img src={IllustrationDesktop} alt="Ilustración de LEA, personas interactuando y estudiando idiomas como: francés, inglés y español." />
           </animated.div>
         ) : (
           <animated.div
@@ -85,7 +85,7 @@ function Enquiry({ scrollToRef, contactRef, isTablet, isMobile }) {
             style={inView}
             className="enquiry-illustration-mobile"
           >
-            <img src={IllustrationMobile} alt="" />
+            <img src={IllustrationMobile} alt="Ilustración de LEA, personas interactuando y estudiando idiomas como: francés, inglés y español." />
           </animated.div>
         )}
       </section>

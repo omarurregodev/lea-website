@@ -1,7 +1,7 @@
 import "./Wbutton.scss";
 
 function Wbutton() {
-  const phoneNumber = "+15169244717";
+  const phoneNumber = "+34668551899";
   const message = encodeURIComponent("Hola, estoy interesado en el idioma ");
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
 

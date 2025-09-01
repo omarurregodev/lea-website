@@ -21,7 +21,7 @@ function SingleSlider({ scrollToRef, usRef, isTablet, isMobile }) {
     const text = arrText.map((item) => {
       return `<span>${item} </span>`;
     });
-    slide.push({ text: text, img: item.img });
+    slide.push({ text: text, img: item.img, alt: item.alt });
   });
 
   useEffect(() => {
@@ -109,7 +109,7 @@ function SingleSlider({ scrollToRef, usRef, isTablet, isMobile }) {
                 </div>
                 {!isMobile ? (
                   <div className="slide-image">
-                    <img src={item.img} alt="" />
+                    <img src={item.img} alt={item.alt} />
                   </div>
                 ) : null}
               </div>

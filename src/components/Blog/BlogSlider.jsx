@@ -18,19 +18,20 @@ function BlogSlider({ list }) {
   };
 
   const visibleItems = list.slice(currentIndex, currentIndex + itemsToShow);
+
   return (
     <>
       <div className="blog-content-slider">
         <div className="blog-content-slider-track" >
           {list.slice(currentIndex, currentIndex + itemsToShow).map((item) => (
             <div key={item.title} className={`blog-content-slider-track-item`}>
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="ilustración del anuncio relacionada con el idioma: español, inglés o francés." />
               <h3>{item.title}</h3>
               <p>{item.date}</p>
               <p>{item.desc}</p>
               {item.cta && (
-                <button>
-                  <a href={item.link} target="_blank">Ver más...</a>
+                <button aria-label="ver mas">
+                  <a href={item.link} target="_blank" aria-label="permite ver más contenido">{item.cta_title}</a>
                 </button>
               )}
             </div>
@@ -42,6 +43,7 @@ function BlogSlider({ list }) {
           className="leftArrow"
           onClick={handlePrev}
           disabled={currentIndex === 0}
+          aria-label="flecha izquierda"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +57,7 @@ function BlogSlider({ list }) {
               strokeWidth="1.2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              stroke="#d9d9d9"
+              // stroke="#d9d9d9"
             />
           </svg>
         </button>
@@ -63,6 +65,7 @@ function BlogSlider({ list }) {
           className="rightArrow"
           onClick={handleNext}
           disabled={currentIndex + itemsToShow >= list.length}
+          aria-label="flecha derecha"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +79,7 @@ function BlogSlider({ list }) {
               strokeWidth="1.2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              stroke="#d9d9d9"
+              // stroke="#d9d9d9"
             />
           </svg>
         </button>

@@ -1,40 +1,28 @@
 const testimonials = [
   {
-    text: "I think my teacher inspired every student to perform their best. She was always positive and the students fed off of her passion for teaching. Students never skipped class because our teacher made us want to learn the material, not just got through the motions. I can say that my love for languages grew as a result of her teaching style and overall attitude towards the class",
-    name: "",
-    city: "",
-    year: ""
+    text: "Mi experiencia en la academia LEA ha sido extremadamente positiva. Decidí cursar el nivel C1 de Cambridge y estoy muy contenta con los resultados. La profesora siempre estuvo muy atenta, ofreciendo apoyo personalizado y asegurándose de que pudiera avanzar en mi aprendizaje de manera efectiva. Además, la metodología de enseñanza fue dinámica y muy adaptada a mis necesidades, lo que hizo que cada clase fuera interesante y productiva. Sin duda, recomiendo LEA a quienes busquen una formación sólida y de calidad en inglés",
+    name: "Silvia Poyales",
+    city: "Navarra",
+    year: "2025"
   },
   {
-    text: "Me encanta la clase! La profesora es muy organizada y aprendí mucho. ",
-    name: "",
-    city: "",
-    year: ""
+    text: "Me apunté a la academia para prepararme el examen del C1 de inglés de Cambridge, y mi experiencia ha sido muy satisfactoria. El trato es muy cercano, y la dinámica y preparación de las clases ayuda mucho.",
+    name: "Sara Latorre",
+    city: "Navarra",
+    year: "2025"
   },
   {
-    text: "Me encantó esta clase !! La profesora tiene mucha energía y nos ayuda muchísimo a aprender!! Tiene que seguir con lo que hace!!!",
-    name: "",
-    city: "",
-    year: ""
+    text: "Estuve preparándome en la academia LEA durante un curso y cuatro meses para obtener el B2, trabajando a fondo gramática, listening y speaking. Desde pequeña me ha gustado mucho el inglés, y gracias al apoyo de los profesores y al material de estudio, pude mejorar mucho y afrontar el examen con confianza. Al final conseguí una muy buena nota, y estoy muy agradecida por todo lo que he aprendido en la academia. Thanks team LEA!",
+    name: "Ángela Zalba",
+    city: "Navarra",
+    year: "2025"
   },
   {
-    text: "Me encantan las clases! Mejor profesora de idiomas que he tenido hasta ahora.",
-    name: "",
-    city: "",
-    year: ""
+    text: "Llevo desde muy pequeña en la academia estudiando tanto inglés como francés, y los resultados fueron notorios desde el principio. Estoy muy contenta tanto con los profesores como con el trabajo que hacemos y los avances que tenemos.",
+    name: "Alaia Oreja",
+    city: "Navarra",
+    year: "2025"
   },
-  {
-    text: "Me encantó el curso, especialmente la forma interactiva en la que se establecieron las clases. La profesora nos ha motivado mucho a participar y a hablar para mejorar nuestras capacidades.",
-    name: "",
-    city: "",
-    year: ""
-  },
-  {
-    text: "A la profesora le importa que sus estudiantes aprendan. Esta dispuesta a ayudar lo más que puede en este objetivo. Siempre sentí que estaba capaz de hacer cosas importantes en su clase.",
-    name: "",
-    city: "",
-    year: ""
-  }
 ];
 
 export default testimonials;

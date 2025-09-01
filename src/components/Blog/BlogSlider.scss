@@ -4,7 +4,7 @@
   display: none;
 }
 .blog-content-slider {
-  max-width: 45%;
+  max-width: 48%;
   width: 1000px !important;
   overflow-x: auto;
   display: -webkit-inline-box;
@@ -13,7 +13,7 @@
 
   &-track {
     display: flex;
-    gap: 30px;
+    gap: 15px;
 
     @keyframes fadeIn {
         0% {
@@ -97,15 +97,31 @@
 .blog-content-nav {
   display: flex;
   flex-direction: row;
-  gap: 30px;
   position: absolute;
-  left: 55.3%;
+  right: 3%;
   bottom: 10px;
+  width: 40px;
 
   .leftArrow {
     transform: scale(1.5);
+    stroke: $white;
+    svg {
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+        stroke: $orange;
+      }
+    }
   }
   .rightArrow {
     transform: rotateZ(180deg) scale(1.5);
+    stroke: $white;
+    svg {
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+        stroke: $orange;
+      }
+    }
   }
 }

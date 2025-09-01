@@ -3,8 +3,7 @@ import Carousel from "./Carousel";
 import Modal from "./Modal";
 import "./RoundQuad.scss";
 import { useInView, animated } from "@react-spring/web";
-import Calendario from "../../assets/calendario.pdf";
-import Horario from "../../assets/horario_prueba.png";
+import Horario from "../../assets/Horario.pdf";
 
 function RoundQuad({ scrollToRef, coursesRef, isTablet, isMobile }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -51,7 +50,7 @@ function RoundQuad({ scrollToRef, coursesRef, isTablet, isMobile }) {
 
   // Close Animation
 
-  const phoneNumber = "+15169244717";
+  const phoneNumber = "+34668551899";
   const message = encodeURIComponent("Hola, estoy interesado en el idioma ");
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
 
@@ -80,16 +79,17 @@ function RoundQuad({ scrollToRef, coursesRef, isTablet, isMobile }) {
             </span>
           </animated.h2>
           <animated.p ref={ref} style={inView} className="parragraph">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo iusto
-            odio placeat, asperiores facere ad labore cupiditate
+            En LEA te preparamos para viajar, te entrenamos para certificarte,
+            te ofrecemos refuerzo escolar o te acompañamos mientras aprendes a
+            comunicarte y a entender el mundo en diferentes idiomas.
           </animated.p>
           {!isMobile ? <div className="prods-carousel-filter"></div> : null}
           {!isMobile ? (
             <Carousel toggleDiv={toggleDiv} />
           ) : (
             <div className="course_btn">
-              <button className="course_btn-item">
-                <a className="cursos-link" href={Calendario} target="_blank">
+              <button className="course_btn-item" aria-label="direcciona al horario de cursos">
+                <a className="cursos-link" href={Horario} target="_blank" aria-label="redirige a Horario">
                   Cursos
                 </a>
               </button>
@@ -103,21 +103,26 @@ function RoundQuad({ scrollToRef, coursesRef, isTablet, isMobile }) {
             />
           ) : null}
           <animated.div ref={ref} style={inView} className="moreInfo">
-            <p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M7.37575 0.59536C7.40483 0.361614 7.74361 0.361614 7.77269 0.595359L8.39178 5.57178C8.41094 5.72582 8.59065 5.80026 8.71313 5.70489L12.6698 2.62379C12.8556 2.47907 13.0951 2.71862 12.9504 2.90447L9.86933 6.86109C9.77396 6.98357 9.8484 7.16328 10.0024 7.18244L14.9789 7.80153C15.2126 7.83061 15.2126 8.16939 14.9789 8.19847L10.0024 8.81756C9.8484 8.83672 9.77396 9.01643 9.86933 9.13891L12.9504 13.0955C13.0951 13.2814 12.8556 13.5209 12.6697 13.3762L8.71313 10.2951C8.59065 10.1997 8.41094 10.2742 8.39178 10.4282L7.77269 15.4046C7.74361 15.6384 7.40483 15.6384 7.37575 15.4046L6.75666 10.4282C6.7375 10.2742 6.55778 10.1997 6.43531 10.2951L2.47869 13.3762C2.29284 13.5209 2.05329 13.2814 2.19801 13.0955L5.27911 9.13891C5.37448 9.01643 5.30004 8.83672 5.146 8.81756L0.169578 8.19847C-0.0641676 8.16939 -0.0641677 7.83061 0.169578 7.80153L5.146 7.18244C5.30004 7.16328 5.37448 6.98356 5.27911 6.86109L2.19801 2.90447C2.05329 2.71862 2.29284 2.47907 2.47869 2.62379L6.43531 5.70489C6.55778 5.80026 6.7375 5.72582 6.75666 5.57178L7.37575 0.59536Z"
-                  fill="#DC5326"
-                />
-              </svg>
-              <a href={Horario} target="_blank"> Horario de clases</a>
-            </p>
+            {!isMobile ? (
+              <p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M7.37575 0.59536C7.40483 0.361614 7.74361 0.361614 7.77269 0.595359L8.39178 5.57178C8.41094 5.72582 8.59065 5.80026 8.71313 5.70489L12.6698 2.62379C12.8556 2.47907 13.0951 2.71862 12.9504 2.90447L9.86933 6.86109C9.77396 6.98357 9.8484 7.16328 10.0024 7.18244L14.9789 7.80153C15.2126 7.83061 15.2126 8.16939 14.9789 8.19847L10.0024 8.81756C9.8484 8.83672 9.77396 9.01643 9.86933 9.13891L12.9504 13.0955C13.0951 13.2814 12.8556 13.5209 12.6697 13.3762L8.71313 10.2951C8.59065 10.1997 8.41094 10.2742 8.39178 10.4282L7.77269 15.4046C7.74361 15.6384 7.40483 15.6384 7.37575 15.4046L6.75666 10.4282C6.7375 10.2742 6.55778 10.1997 6.43531 10.2951L2.47869 13.3762C2.29284 13.5209 2.05329 13.2814 2.19801 13.0955L5.27911 9.13891C5.37448 9.01643 5.30004 8.83672 5.146 8.81756L0.169578 8.19847C-0.0641676 8.16939 -0.0641677 7.83061 0.169578 7.80153L5.146 7.18244C5.30004 7.16328 5.37448 6.98356 5.27911 6.86109L2.19801 2.90447C2.05329 2.71862 2.29284 2.47907 2.47869 2.62379L6.43531 5.70489C6.55778 5.80026 6.7375 5.72582 6.75666 5.57178L7.37575 0.59536Z"
+                    fill="#DC5326"
+                  />
+                </svg>
+                <a href={Horario} target="_blank" aria-label="redirige a Horario">
+                  {" "}
+                  Horario de clases
+                </a>
+              </p>
+            ) : null}
           </animated.div>
         </div>
       </section>

@@ -1,6 +1,5 @@
 import VideoHero from "../../assets/hero.mp4";
-import Heroimg from "../../assets/slide1.jpg";
-import PaperPlane from "../../assets/paperplane.svg";
+import mobileVideo from "../../assets/mobile_video.mp4";
 import { useState, useEffect } from "react";
 import "./Hero.scss";
 
@@ -64,9 +63,19 @@ function Hero({ scrollToRef, contactRef, isTablet, isMobile }) {
               <source src={VideoHero} type="video/mp4" />
             </video>
           ) : (
-            <div className="hero-image">
-              <img src={Heroimg} alt="" />
-            </div>
+            <video
+              className={`videoBg-video ${videoVisible ? "show" : ""}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              id="myVideo"
+            >
+              <source src={VideoHero} type="video/mp4" />
+            </video>
+            // <div className="hero-image">
+            //   <img src={Heroimg} alt="Estudiantes atendiendo una clase de idiomas" />
+            // </div>
           )}
         </div>
         <div className="hero_content">
@@ -80,6 +89,7 @@ function Hero({ scrollToRef, contactRef, isTablet, isMobile }) {
             </h2>
             <button
               className={`hero_content-copy-btn ${btnVisible ? "show" : ""}`}
+              aria-label="inscribirse"
             >
               <a
                 onClick={() => scrollToRef(contactRef)}

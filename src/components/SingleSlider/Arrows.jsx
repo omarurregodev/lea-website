@@ -3,7 +3,7 @@ import "./Arrows.scss";
 function Arrows({prevSlide, nextSlide}) {
   return (
     <>
-      <span className="leftArrow" onClick={prevSlide}>
+      <button className="leftArrow" onClick={prevSlide} aria-label="flecha izquierda">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="10"
@@ -19,8 +19,8 @@ function Arrows({prevSlide, nextSlide}) {
             stroke="#d9d9d9"
           />
         </svg>
-      </span>
-      <button className="rightArrow" onClick={nextSlide}>
+      </button>
+      <button className="rightArrow" onClick={nextSlide} aria-label="flecha derecha">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="10"

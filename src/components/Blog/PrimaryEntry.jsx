@@ -6,9 +6,9 @@ function PrimaryEntry({ item }) {
     <>
       <div className="blog-content-big">
         <div className="blog-content-big-content">
-          <img src={item.img} alt="" />
+          <img src={item.img} alt="ilustración del anuncio relacionada con el idioma: español, inglés o francés." />
           <div className="text">
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               width="239"
               height="178"
@@ -21,13 +21,15 @@ function PrimaryEntry({ item }) {
                 strokeWidth="1.5"
                 strokeLinecap="round"
               ></path>
-            </svg>
+            </svg> */}
             <h3>{item.title}</h3>
             <p>{item.date}</p>
             <p>{item.desc}</p>
             {item.cta && (
-              <button>
-                <a href={item.link} target="_blank">Ver más...</a>
+              <button aria-label="ver mas">
+                <a href={item.link} target="_blank" aria-label="permite ver más contenido">
+                  {item.cta_title}
+                </a>
               </button>
             )}
           </div>

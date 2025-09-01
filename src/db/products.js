@@ -1,43 +1,43 @@
-import prodE1 from "../assets/products/english/prod_1.png";
-import prodE1_1 from "../assets/products/english/prod_1_1.png";
-import prodE1_2 from "../assets/products/english/prod_1_2.png";
-import prodE1_3 from "../assets/products/english/prod_1_3.png";
-import prodE2 from "../assets/products/english/prod_2.png";
-import prodE2_1 from "../assets/products/english/prod_2_1.png";
-import prodE2_2 from "../assets/products/english/prod_2_2.png";
-import prodE2_3 from "../assets/products/english/prod_2_3.png";
-import prodE3 from "../assets/products/english/prod_3.png";
-import prodE3_1 from "../assets/products/english/prod_3_1.png";
-import prodE3_2 from "../assets/products/english/prod_3_2.png";
-import prodE4 from "../assets/products/english/prod_4.png";
-import prodE4_1 from "../assets/products/english/prod_4_1.png";
-import prodE4_2 from "../assets/products/english/prod_4_2.png";
-import prodE5 from "../assets/products/english/prod_5.png";
-import prodE5_1 from "../assets/products/english/prod_5_1.png";
-import prodE5_2 from "../assets/products/english/prod_5_2.png";
-import prodE5_3 from "../assets/products/english/prod_5_3.png";
-import prodE5_4 from "../assets/products/english/prod_5_4.png";
-import prodF1 from "../assets/products/french/prod_1.png";
-import prodF1_1 from "../assets/products/french/prod_1_1.png";
-import prodF1_2 from "../assets/products/french/prod_1_2.png";
-import prodF1_3 from "../assets/products/french/prod_1_3.png";
-import prodF2 from "../assets/products/french/prod_2.png";
-import prodF2_1 from "../assets/products/french/prod_2_1.png";
-import prodF2_2 from "../assets/products/french/prod_2_2.png";
-import prodF3 from "../assets/products/french/prod_3.png";
-import prodF3_1 from "../assets/products/french/prod_3_1.png";
-import prodF3_2 from "../assets/products/french/prod_3_2.png";
-import prodF4 from "../assets/products/french/prod_4.png";
-import prodF4_1 from "../assets/products/french/prod_4_1.png";
-import prodF4_2 from "../assets/products/french/prod_4_2.png";
-import prodF4_3 from "../assets/products/french/prod_4_3.png";
-import prodF5 from "../assets/products/french/prod_5.png";
-import prodF5_1 from "../assets/products/french/prod_5_1.png";
-import prodF5_2 from "../assets/products/french/prod_5_2.png";
-import prodF5_3 from "../assets/products/french/prod_5_3.png";
-import prodF5_4 from "../assets/products/french/prod_5_4.png";
-import prod6 from "../assets/products/prod_6.png";
-import prod7 from "../assets/products/prod_7.png";
+import prodE1 from "../assets/products/english/prod_1.webp";
+import prodE1_1 from "../assets/products/english/prod_1_1.webp";
+import prodE1_2 from "../assets/products/english/prod_1_2.webp";
+import prodE1_3 from "../assets/products/english/prod_1_3.webp";
+import prodE2 from "../assets/products/english/prod_2.webp";
+import prodE2_1 from "../assets/products/english/prod_2_1.webp";
+import prodE2_2 from "../assets/products/english/prod_2_2.webp";
+import prodE2_3 from "../assets/products/english/prod_2_3.webp";
+import prodE3 from "../assets/products/english/prod_3.webp";
+import prodE3_1 from "../assets/products/english/prod_3_1.webp";
+import prodE3_2 from "../assets/products/english/prod_3_2.webp";
+import prodE4 from "../assets/products/english/prod_4.webp";
+import prodE4_1 from "../assets/products/english/prod_4_1.webp";
+import prodE4_2 from "../assets/products/english/prod_4_2.webp";
+import prodE5 from "../assets/products/english/prod_5.webp";
+import prodE5_1 from "../assets/products/english/prod_5_1.webp";
+import prodE5_2 from "../assets/products/english/prod_5_2.webp";
+import prodE5_3 from "../assets/products/english/prod_5_3.webp";
+import prodE5_4 from "../assets/products/english/prod_5_4.webp";
+import prodF1 from "../assets/products/french/prod_1.webp";
+import prodF1_1 from "../assets/products/french/prod_1_1.webp";
+import prodF1_2 from "../assets/products/french/prod_1_2.webp";
+import prodF1_3 from "../assets/products/french/prod_1_3.webp";
+import prodF2 from "../assets/products/french/prod_2.webp";
+import prodF2_1 from "../assets/products/french/prod_2_1.webp";
+import prodF2_2 from "../assets/products/french/prod_2_2.webp";
+import prodF3 from "../assets/products/french/prod_3.webp";
+import prodF3_1 from "../assets/products/french/prod_3_1.webp";
+import prodF3_2 from "../assets/products/french/prod_3_2.webp";
+import prodF4 from "../assets/products/french/prod_4.webp";
+import prodF4_1 from "../assets/products/french/prod_4_1.webp";
+import prodF4_2 from "../assets/products/french/prod_4_2.webp";
+import prodF4_3 from "../assets/products/french/prod_4_3.webp";
+import prodF5 from "../assets/products/french/prod_5.webp";
+import prodF5_1 from "../assets/products/french/prod_5_1.webp";
+import prodF5_2 from "../assets/products/french/prod_5_2.webp";
+import prodF5_3 from "../assets/products/french/prod_5_3.webp";
+import prodF5_4 from "../assets/products/french/prod_5_4.webp";
+import prod6 from "../assets/products/prod_6.webp";
+import prod7 from "../assets/products/prod_7.webp";
 
 const productsList = [
     {
@@ -50,7 +50,7 @@ const productsList = [
             {
                 id: 0,
                 title: "Movers A1",
-                subtitle: "3º de primaria",
+                subtitle: "3º-4º de primaria",
                 desc: {
                     desc:"Primeros pasos en la comunicación en inglés.",
                     schedule: {
@@ -64,7 +64,7 @@ const productsList = [
             {
                 id: 1,
                 title: "Flyers A2",
-                subtitle: "4º de primaria",
+                subtitle: "4º-5º de primaria",
                 desc: {
                     desc:"Expansión del vocabulario y habilidades orales.",
                     schedule: {
@@ -85,7 +85,7 @@ const productsList = [
                         day: "Martes, miércoles y jueves",
                         time: "17:40 - 19:10"
                     },
-                    price: "50€/mes"
+                    price: "74€/mes"
                 },
                 img: prodE1_3
             }
@@ -101,12 +101,12 @@ const productsList = [
             {
                 id: 0,
                 title: "Achievers B1.1",
-                subtitle: "1-2 ESO",
+                subtitle: "6º-1º ESO",
                 desc: {
                     desc:"Inicio del nivel intermedio",
                     schedule: {
                         day: "Lunes",
-                        time: "17:40-19:40"
+                        time: "17:40-19:10"
                     },
                     price: "74€/mes"
                 },
@@ -115,7 +115,7 @@ const productsList = [
             {
                 id: 1,
                 title: "Achievers B1.2",
-                subtitle: "3-4 ESO",
+                subtitle: "1º-2º ESO",
                 desc: {
                     desc:"Consolidación del B1.",
                     schedule: {
@@ -151,7 +151,7 @@ const productsList = [
         items: [
             {
                 id: 0,
-                title: "Pathfinders",
+                title: "Pathfinders B2",
                 subtitle: "FCE Starters: B2.1",
                 desc: {
                     desc:"Primer contacto con el nivel B2.",

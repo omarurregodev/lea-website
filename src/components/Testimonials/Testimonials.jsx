@@ -79,7 +79,7 @@ function Testimonials({ isMobile, isTablet }) {
             </h2>
           </div>
         )}
-        <img src={line} alt="" />
+        <img src={line} alt="Patron de curva" />
         <div className="testimonials-track">
           {testimonials.map((item, index) => {
             return (

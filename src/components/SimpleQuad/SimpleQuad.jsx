@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import subSVG from "../../assets/subtitles.svg";
-import imgTeacher from "../../assets/teacher.png";
+import imgTeacher from "../../assets/teacher.webp";
 import "./SimpleQuad.scss";
 import { useInView, animated } from "@react-spring/web";
 
@@ -70,7 +70,7 @@ function SimpleQuad() {
           <div className="staff">
             <div className="staff-item">
               <div className="filterBg"></div>
-              <img src={imgTeacher} alt="" />
+              <img src={imgTeacher} alt="Foto de perfil del profesor" />
               <div className="staff-item-desc">
                 <h3>Eliana Díaz</h3>
                 <p>Inglés y español</p>
@@ -78,7 +78,7 @@ function SimpleQuad() {
             </div>
             <div className="staff-item">
               <div className="filterBg"></div>
-              <img src={imgTeacher} alt="" />
+              <img src={imgTeacher} alt="Foto de perfil del profesor" />
               <div className="staff-item-desc">
                 <h3>Laura Martín de Vidales</h3>
                 <p>Inglés</p>
@@ -86,7 +86,7 @@ function SimpleQuad() {
             </div>
             <div className="staff-item">
               <div className="filterBg"></div>
-              <img src={imgTeacher} alt="" />
+              <img src={imgTeacher} alt="Foto de perfil del profesor" />
               <div className="staff-item-desc">
                 <h3>Marcos Martín</h3>
                 <p>Inglés y francés</p>
@@ -94,7 +94,7 @@ function SimpleQuad() {
             </div>
             <div className="staff-item">
               <div className="filterBg"></div>
-              <img src={imgTeacher} alt="" />
+              <img src={imgTeacher} alt="Foto de perfil del profesor" />
               <div className="staff-item-desc">
                 <h3>Andrea</h3>
                 <p>Francés</p>

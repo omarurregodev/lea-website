@@ -15,7 +15,10 @@ function Flipcard({ data }) {
       <div className="flip-card-inner">
         <div className="flip-card-front">
           <div className="flip-card-front-filter"></div>
-          <img src={data.img} alt="" />
+          <img
+            src={data.img}
+            alt="Ilustracion de producto relacionada con los idiomas inglés, francés o español"
+          />
           <h3>{data.title}</h3>
           <p>{data.subtitle}</p>
         </div>
@@ -23,7 +26,9 @@ function Flipcard({ data }) {
           <ul className="flip-card-back-list">
             <li key={data.desc}>
               <p>{data.desc.desc}</p>
-              <img src={CalendarIcon} alt="Calendar icon SVG" />
+              {(data.desc.schedule.day.length > 0) ? (
+                <img src={CalendarIcon} alt="Calendar icon SVG" />
+              ) : null}
               <span className="day-line">{data.desc.schedule.day}</span>
               <span className="hour-line">{data.desc.schedule.time}</span>
               <span className="price-line">{data.desc.price}</span>

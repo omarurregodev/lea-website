@@ -20,9 +20,10 @@ function Modal({ toggleDiv, isVisible, index }) {
                 return <Flipcard key={data.uniqueKey} data={data} />;
               })}
             </div>
+            <p className="modal-content-note">Los horarios mostrados son 24/25. Revisar las opciones en el botón horario 25/26.</p>
           </div>
         )}
-        <button className="closeBtn" onClick={toggleDiv}>
+        <button className="closeBtn" onClick={toggleDiv} aria-label="salir">
           Salir
         </button>
       </div>
