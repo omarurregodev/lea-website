@@ -20,7 +20,7 @@ function EnquiryForm() {
     e.preventDefault();
 
     const response = await fetch(
-      "https://formspree.io/f/mnjjvwjz",
+      "https://formspree.io/f/maqqjkwj",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
