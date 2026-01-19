@@ -7,6 +7,7 @@ import Blog from "../Blog/Blog";
 import Enquiry from "../Enquiry/Enquiry";
 import Wbutton from "../Wbutton/Wbutton";
 
+
 import "./Main.scss";
 
 function Main({scrollToRef, usRef, coursesRef, blogRef, contactRef, isTablet, isMobile}) {

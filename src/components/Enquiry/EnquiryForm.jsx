@@ -18,7 +18,7 @@ function EnquiryForm() {
     e.preventDefault();
 
     const response = await fetch(
-      "https://formsubmit.co/contacto@teamlea.com",
+      "https://formspree.io/f/mnjjvwjz",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -1,5 +1,5 @@
-import Navbar from "../Header/Navbar.jsx";
-import MobileNavbar from "../Header/MobileNavbar.jsx";
+import Navbar from "./Navbar.jsx";
+import MobileNavbar from "./MobileNavbar.jsx";
 import { useState, useEffect } from "react";
 
 import "./Header.scss";
